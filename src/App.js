@@ -2,6 +2,7 @@ import React from "react"
 import TodoItem from "./components/TodoItem"
 import todosData from "./components/todoData.js"
 import "./style.css"
+import Todos from "./Todos"
 
 class App extends React.Component {
   constructor() {
@@ -17,15 +18,15 @@ class App extends React.Component {
 
   render() {
     const todoItems = this.state.todos.map(function (item) {
-      return (
-        <TodoItem
-          item={item}
-          handleClick={this.handleClick}
-        />
-      )
+      return <TodoItem item={item} /* handleClick={this.handleClick} */ />
     })
 
-    return <div className='todo-list'> {todoItems} </div>
+    return (
+      <div className='todo-list'>
+        <Todos />
+        {todoItems}{" "}
+      </div>
+    )
   }
 }
 
