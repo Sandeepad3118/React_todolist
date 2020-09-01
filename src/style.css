@@ -48,4 +48,9 @@ body {
   text-align: center;
   transition: all 0.2s;
 }
-/* rth */
+
+.cnter{
+  text-align:center;
+  font-weight: 500;
+  font-size:30px;
+}
