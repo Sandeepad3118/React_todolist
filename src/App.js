@@ -18,20 +18,13 @@ class App extends React.Component {
   handleClick(id) {
     console.log("changed", id)
   }
-  handleChange() {
-    this.setState(function(prevState){
-      return{
-        count:prevState.count + 1
-      }
-    }
-    )
-  }
- 
-  
+  handleChange=(id)=> {
 
+    console.log("changed",id)
+  }
   render() {
     const todoItems = this.state.todos.map(function (item) {
-      return <TodoItem item={item} /* handleClick={this.handleClick} */ />
+      return <TodoItem item={item} /* handleChange={this.handleChange}  *//>
     })
 
     return (
